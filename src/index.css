@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   DESIGN SYSTEM - Portfólio de Pedro Henrique Nascimento Frachini
+   --------------------------------------------------------------------------
+   Regras:
+   1. Todas as cores são declaradas em HSL no formato cru "H S% L%" (sem hsl()).
+      Isso permite o uso de tokens semânticos no Tailwind + opacidade (ex: bg-primary/10).
+   2. O tema escuro é obtido apenas sobrescrevendo as variáveis em `.dark`.
+   3. Componentes nunca usam cores "cruas" (text-white, bg-black...). Use tokens.
+   ========================================================================== */
+
+@layer base {
+  :root {
+    /* --- Superfícies --- */
+    --background: 240 20% 98%;
+    --foreground: 240 12% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 12% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 12% 12%;
+
+    /* --- Marca --- */
+    --primary: 243 75% 59%;          /* indigo */
+    --primary-foreground: 0 0% 100%;
+    --accent: 262 83% 58%;           /* violeta */
+    --accent-foreground: 0 0% 100%;
+
+    /* --- Apoio --- */
+    --secondary: 243 30% 94%;
+    --secondary-foreground: 243 30% 25%;
+    --muted: 240 15% 96%;
+    --muted-foreground: 240 6% 42%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 12% 90%;
+    --input: 240 12% 90%;
+    --ring: 243 75% 59%;
+
+    /* --- Gradientes --- */
+    --gradient-brand: linear-gradient(135deg, hsl(243 75% 59%) 0%, hsl(262 83% 58%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(240 20% 99%) 0%, hsl(240 20% 96%) 100%);
+    --gradient-glow: radial-gradient(closest-side, hsl(262 83% 58% / 0.22), transparent 100%);
+    --gradient-sheen: linear-gradient(120deg, transparent 0%, hsl(0 0% 100% / 0.55) 50%, transparent 100%);
+
+    /* --- Sombras --- */
+    --shadow-card: 0 1px 2px hsl(240 12% 12% / 0.05), 0 10px 30px -14px hsl(240 12% 12% / 0.16);
+    --shadow-card-hover: 0 2px 6px hsl(240 12% 12% / 0.06), 0 22px 46px -18px hsl(243 75% 59% / 0.30);
+    --shadow-glow: 0 0 70px -14px hsl(262 83% 58% / 0.35);
+
+    /* --- Movimento --- */
+    --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+    --radius: 1rem;
+
+    /* --- Layout --- */
+    --nav-height: 4.5rem;
+  }
+
+  .dark {
+    --background: 240 15% 7%;
+    --foreground: 240 10% 96%;
+    --card: 240 13% 11%;
+    --card-foreground: 240 10% 96%;
+    --popover: 240 13% 11%;
+    --popover-foreground: 240 10% 96%;
+
+    --primary: 243 89% 74%;
+    --primary-foreground: 243 45% 12%;
+    --accent: 262 85% 75%;
+    --accent-foreground: 262 45% 12%;
+
+    --secondary: 243 22% 18%;
+    --secondary-foreground: 240 10% 92%;
+    --muted: 240 12% 15%;
+    --muted-foreground: 240 8% 66%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 243 89% 74%;
+
+    --gradient-surface: linear-gradient(180deg, hsl(240 15% 8%) 0%, hsl(240 15% 6%) 100%);
+    --gradient-sheen: linear-gradient(120deg, transparent 0%, hsl(0 0% 100% / 0.07) 50%, transparent 100%);
+
+    --shadow-card: 0 1px 2px hsl(0 0% 0% / 0.40), 0 12px 34px -16px hsl(0 0% 0% / 0.65);
+    --shadow-card-hover: 0 2px 8px hsl(0 0% 0% / 0.45), 0 24px 52px -20px hsl(243 89% 74% / 0.28);
+    --shadow-glow: 0 0 80px -14px hsl(262 85% 75% / 0.30);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-height) + 1.5rem);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    background-color: hsl(var(--primary) / 0.22);
+  }
+
+  /* Barra de rolagem discreta e coerente com o tema */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.45);
+  }
+}
+
+@layer components {
+
+  /* Largura máxima e respiro lateral padrão de todas as seções */
+  .section-shell {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  /* Ritmo vertical das seções */
+  .section-pad {
+    @apply py-20 md:py-28;
+  }
+
+  /* Cartão base do projeto (atividades, projetos, habilidades, contato) */
+  .surface-card {
+    @apply rounded-2xl border border-border/70 bg-card text-card-foreground transition-all duration-300 ease-out-expo;
+    box-shadow: var(--shadow-card);
+  }
+
+  .surface-card-interactive {
+    @apply hover:-translate-y-1 hover:border-primary/40;
+  }
+
+  .surface-card-interactive:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  /* "Eyebrow": pequeno rótulo acima dos títulos de seção */
+  .eyebrow {
+    @apply text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-primary;
+  }
+
+  /* Link com sublinhado animado */
+  .link-underline {
+    @apply relative text-primary transition-colors duration-200;
+    background-image: linear-gradient(hsl(var(--primary)), hsl(var(--primary)));
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size 250ms var(--ease-out-expo);
+  }
+
+  .link-underline:hover {
+    background-size: 100% 1px;
+  }
+}
+
+@layer utilities {
+
+  /* Grade sutil de fundo usada no hero */
+  .grid-backdrop {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.7) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.7) 1px, transparent 1px);
+    background-size: 34px 34px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 80%);
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 80%);
+  }
+
+  /* Halo decorativo (blob) posicionado atrás do conteúdo */
+  .glow-orb {
+    background-image: var(--gradient-glow);
+    filter: blur(60px);
+    pointer-events: none;
+  }
+
+  /* Texto com o gradiente da marca */
+  .text-gradient {
+    background-image: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Reveal no scroll (controlado pelo componente <Reveal />) */
+  .reveal {
+    opacity: 0;
+    transition:
+      opacity 800ms var(--ease-out-expo),
+      transform 800ms var(--ease-out-expo);
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+  }
+
+  .reveal-up {
+    transform: translate3d(0, 32px, 0);
+  }
+
+  .reveal-left {
+    transform: translate3d(-32px, 0, 0);
+  }
+
+  .reveal-right {
+    transform: translate3d(32px, 0, 0);
+  }
+
+  .reveal-scale {
+    transform: scale(0.96);
+  }
+
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}

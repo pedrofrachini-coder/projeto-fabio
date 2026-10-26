@@ -1,0 +1,63 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 2482 >>
+stream
+BT /F1 20 Tf 56 780 Td (Pedro Henrique Nascimento Frachini) Tj ET
+BT /F1 12 Tf 56 758 Td (Curriculo - Tecnico em Informatica) Tj ET
+BT /F1 9.5 Tf 56 740 Td (IFMS - Instituto Federal de Mato Grosso do Sul | Campus Nova Andradina) Tj ET
+BT /F1 9.5 Tf 56 727 Td (Nova Andradina - MS, Brasil | pedro.frachini@email.com) Tj ET
+BT /F1 11.5 Tf 56 698 Td (Resumo profissional) Tj ET
+0.42 0.36 0.85 RG 1 w 56 690 m 300 690 l S
+BT /F1 9.8 Tf 56 678 Td (Estudante do curso Tecnico em Informatica do IFMS, com base em logica de) Tj ET
+BT /F1 9.8 Tf 56 665 Td (programacao, desenvolvimento web e banco de dados. Experiencia em projetos) Tj ET
+BT /F1 9.8 Tf 56 652 Td (academicos, monitoria e apoio tecnico no laboratorio de informatica do campus.) Tj ET
+BT /F1 11.5 Tf 56 623 Td (Formacao academica) Tj ET
+0.42 0.36 0.85 RG 1 w 56 615 m 300 615 l S
+BT /F1 9.8 Tf 56 603 Td (Tecnico em Informatica \(integrado ao ensino medio\) - IFMS, Campus Nova Andradina) Tj ET
+BT /F1 9.8 Tf 56 590 Td (Previsao de conclusao: 2025 | Periodo atual: 3o ano) Tj ET
+BT /F1 11.5 Tf 56 561 Td (Conhecimentos tecnicos) Tj ET
+0.42 0.36 0.85 RG 1 w 56 553 m 300 553 l S
+BT /F1 9.8 Tf 56 541 Td (HTML5 | CSS3 | JavaScript | PHP | SQL \(MySQL\) | Python \(basico\)) Tj ET
+BT /F1 9.8 Tf 56 528 Td (Versionamento de codigo | Figma | VS Code | Linux | Acessibilidade web | Redes) Tj ET
+BT /F1 11.5 Tf 56 499 Td (Projetos selecionados) Tj ET
+0.42 0.36 0.85 RG 1 w 56 491 m 300 491 l S
+BT /F1 9.8 Tf 56 479 Td (Sistema Escolar Web - gestao de alunos, turmas e notas \(PHP + MySQL\)) Tj ET
+BT /F1 9.8 Tf 56 466 Td (Aplicativo de Controle de Estudos - metas e progresso offline \(JavaScript\)) Tj ET
+BT /F1 9.8 Tf 56 453 Td (Landing Page de Projeto Social do IFMS - layout responsivo e acessivel) Tj ET
+BT /F1 11.5 Tf 56 424 Td (Atividades e premios) Tj ET
+0.42 0.36 0.85 RG 1 w 56 416 m 300 416 l S
+BT /F1 9.8 Tf 56 404 Td (Monitoria de Logica de Programacao \(2024\)) Tj ET
+BT /F1 9.8 Tf 56 391 Td (2o lugar na I Feira de Ciencias e Tecnologia do IFMS - Desenvolvimento de Software) Tj ET
+BT /F1 11.5 Tf 56 362 Td (Contato) Tj ET
+0.42 0.36 0.85 RG 1 w 56 354 m 300 354 l S
+BT /F1 9.8 Tf 56 342 Td (E-mail: pedro.frachini@email.com) Tj ET
+BT /F1 9.8 Tf 56 329 Td (Portfolio: github.com/pedrohfrachini | LinkedIn: linkedin.com/in/pedro-henrique-frachini) Tj ET
+BT /F1 8.4 Tf 56 306 Td (Substitua este arquivo pelo seu curriculo atualizado: public/curriculo-pedro-frachini.pdf) Tj ET
+0.42 0.36 0.85 RG 0.8 w 56 800 m 539 800 l S
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000002775 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2872
+%%EOF

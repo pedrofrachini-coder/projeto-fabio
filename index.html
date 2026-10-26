@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <link href="/favicon.ico" rel="icon shortcut">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedro Henrique Nascimento Frachini | Portfólio Acadêmico</title>
+  <meta name="description"
+    content="Portfólio acadêmico de Pedro Henrique Nascimento Frachini, estudante de Técnico em Informática no IFMS - Campus Nova Andradina. Atividades, projetos, feiras e sites desenvolvidos." />
+  <meta name="author" content="Pedro Henrique Nascimento Frachini" />
+  <meta name="theme-color" content="#4f46e5" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pedro Henrique Nascimento Frachini | Portfólio Acadêmico" />
+  <meta property="og:description"
+    content="Trajetória acadêmica, projetos e sites desenvolvidos por Pedro Henrique Nascimento Frachini - Técnico em Informática (IFMS, Campus Nova Andradina)." />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Tipografia: Poppins (títulos) + Inter (texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Aplica o tema salvo antes da primeira pintura para evitar "flash" de cores -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("phf-theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var isDark = stored ? stored === "dark" : prefersDark;
+        document.documentElement.classList.toggle("dark", isDark);
+      } catch (e) { /* tema padrão (claro) */ }
+    })();
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
